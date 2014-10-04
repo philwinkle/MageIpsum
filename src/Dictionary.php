@@ -3,8 +3,8 @@
 class Dictionary
 {
 
-	const WORDS_IN_SENTENCE_MIN = 5;
-	const WORDS_IN_SENTENCE_MAX = 10;
+	const WORDS_IN_SENTENCE_MIN = 10;
+	const WORDS_IN_SENTENCE_MAX = 20;
 	const SENTENCES_IN_PARAGRAPH_MIN = 5;
 	const SENTENCES_IN_PARAGRAPH_MAX = 8;
 
