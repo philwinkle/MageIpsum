@@ -7,6 +7,12 @@ use Prophecy\Argument;
 
 class IpsumSpec extends ObjectBehavior
 {
+	function let($dictionary)
+	{
+		$dictionary->beADoubleOf('Dictionary');
+		$this->beConstructedWith($dictionary);
+	}
+
     function it_is_initializable()
     {
         $this->shouldHaveType('Ipsum');
@@ -16,4 +22,5 @@ class IpsumSpec extends ObjectBehavior
     {   
         $this->generate()->shouldStartWith('Mage Ipsum');
     }
+
 }
