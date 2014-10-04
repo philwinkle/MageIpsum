@@ -14,6 +14,15 @@ A lorem ipsum-style generator with a Magento dictionary! Over 400 words of Magen
 >Developer invitation Colin Mollenhour use_cache.ser have website. Catalog event native app Eyemagine tiny_mce developer Apache free retake promotion Authorize.net encrypt Ukraine euro native app Google Analytics slow PHP 5.4 resource model cart Magetalk Kalen Jordan. Modern balance meetup Corra you StackExchange jQuery IR500 having license search. EBay antipattern euro sample data theme catalog event. Capture search USPS floating point Magento Connect perf. Eav Silver Partner invoice decimal community MagentoU cart items StackExchange wishlist having Corra module performance. Magento 2 gift wrapping Fooman UPS bowties collections Jary Carter 1.8 decimal backup SQL injection buy x get y. 1.13 media cache tag escape apps.
 
 
+Installation
+--
+
+To install:
+
+```bash
+> composer install
+```
+
 Contribution
 --
 
@@ -22,3 +31,4 @@ To contribute:
 - Add words to `dictionary.txt`
 - To add multiple words like a name, for instance "Kalen Jordan", replace the spaces with a `-` character
 
+This repo uses the [git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) branching model. Pull requests should be issued to the **develop branch**.
