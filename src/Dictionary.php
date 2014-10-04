@@ -24,16 +24,27 @@ class Dictionary
 		return explode(' ',$this->data);
 	}
 
+	public function getOutput($count = 5)
+	{
+		$output = [];
+
+		for($i=0;$i<5;$i++){
+			$output[] = $this->getParagraph();
+		}
+
+		return implode("\n\n", $output);
+	}
+
 	public function getParagraph()
 	{
 		$output         = [];
 		$sentenceLength = $this->getRandom()->getInteger(self::SENTENCES_IN_PARAGRAPH_MIN, self::SENTENCES_IN_PARAGRAPH_MAX);
 
-        for($i=0;$i<=$sentenceLength;$i++){
+        for($i=0;$i<$sentenceLength;$i++){
         	$output[] = $this->getSentence();
         }
 
-        return implode(" ", $output);
+        return implode(' ', $output);
 	}
 
 	public function getSentence()
@@ -41,7 +52,7 @@ class Dictionary
 		$output          = [];
 		$paragraphLength = $this->getRandom()->getInteger(self::WORDS_IN_SENTENCE_MIN, self::WORDS_IN_SENTENCE_MAX);
 
-        for($i=0;$i<=$paragraphLength;$i++){
+        for($i=0;$i<$paragraphLength;$i++){
         	$output[] = $this->getWord();
         }
 
@@ -50,6 +61,7 @@ class Dictionary
 
 	public function getWord()
 	{
-		return str_replace('-', ' ', $this->getData()[$this->getRandom()->getInteger(0, count($this->getData()))]);
+		$count = count($this->getData()) - 1;
+		return str_replace('-', ' ', $this->getData()[$this->getRandom()->getInteger(0, $count)]);
 	}
 }

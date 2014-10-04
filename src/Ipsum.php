@@ -15,7 +15,7 @@ class Ipsum
     public function generate()
     {
         $output = 'Mage Ipsum ';
-        $output .= $this->getDictionary()->getParagraph();
+        $output .= lcfirst($this->getDictionary()->getOutput());
 
         return $output;
     }
